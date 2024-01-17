@@ -62,7 +62,7 @@ export const InfoCard = ({
               <div className="relative aspect-video rounded-md overflow-hidden w-[200px]  outline-dashed outline-muted flex flex-col items-center justify-center space-y-1">
                 <ImagePlus className="w-5 h-5 text-muted-foreground" />
                 <p className="text-xs text-muted-foreground text-center">
-                  "Edit" to add thumbnail
+                  Edit to add thumbnail
                 </p>
               </div>
             )}
