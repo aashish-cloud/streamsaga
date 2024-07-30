@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# StreamSaga 🎥
 
-## Getting Started
+StreamSaga is a live streaming platform developed with Next.js, React.js, Prisma, MongoDB, TypeScript, Ngrok, Livekit, and Clerk. It features real-time chat, viewer counts, stream status updates, and participant management, offering a robust environment for live streaming and audience engagement.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Live Streaming: 📹 High-quality live streaming capabilities using Livekit.
+- Real-Time Chat: 💬 Interactive chat with moderation features like slow chat mode, followers-only chat, and the ability to enable/disable chat.
+- Viewer Counts: 👁 Real-time display of viewer counts for active streams.
+- Stream Status Updates: ⏳ Continuous updates on the status of ongoing streams.
+- Participant Management: 🧑‍🤝‍🧑 Efficient management of stream participants.
+- User Authentication: 🔐 Secure user authentication and management using Clerk.
+- Follow/Following System: 🔄 Comprehensive system to facilitate user interactions and engagement.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Next.js: 🚀 A React framework for server-side rendering and static site generation.
+- React.js: ⚛️ A JavaScript library for building user interfaces.
+- Prisma: 🗃 An ORM for interacting with MongoDB.
+- MongoDB: 📊 A NoSQL database used for storing application data.
+- TypeScript: 🛠 A statically typed superset of JavaScript for better development experience and code quality.
+- Ngrok: 🌐 A tool for exposing local servers to the internet, useful for testing and development.
+- Livekit: 🎙 A platform for building real-time video and audio applications.
+- Clerk: 🔑 A service for user authentication and management.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Installation
 
-## Learn More
+To set up StreamSaga locally, follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the Repository:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    
+    git clone https://github.com/aashish-cloud/streamsaga.git
+    
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2. Navigate to the Project Directory:
 
-## Deploy on Vercel
+    
+    cd streamsaga
+    
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Install Dependencies:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    
+    npm install
+    
+
+4. Configure Environment Variables:
+
+    Create a .env.local file in the root directory of the project and add the following environment variables:
+
+    
+    MONGODB_URI=your_mongodb_uri
+    NEXTAUTH_URL=http://localhost:3000
+    CLERK_API_KEY=your_clerk_api_key
+    LIVEKIT_API_KEY=your_livekit_api_key
+    LIVEKIT_API_SECRET=your_livekit_api_secret
+    
+
+    Replace the placeholder values with your actual credentials.
+
+5. Run Migrations:
+
+    
+    npx prisma migrate dev
+    
+
+6. Start the Development Server:
+
+    
+    npm run dev
+    
+
+    The application should now be running at http://localhost:3000.
+
+## Usage
+
+- Live Streaming: 📹 Start or join a live stream using Livekit's capabilities.
+- Real-Time Chat: 💬 Participate in or moderate the chat during a live stream with features like slow chat mode and followers-only chat.
+- Viewer Counts: 👁 View real-time statistics on the number of viewers for active streams.
+- Stream Management: ⏳ Monitor and manage stream status and participants.
+- User Authentication: 🔐 Register, log in, and manage user accounts securely with Clerk.
+- Follow/Following System: 🔄 Users can follow and interact with others to enhance engagement.
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to StreamSaga, please fork the repository and submit a pull request. 
